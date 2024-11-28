@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - DropArea
+  - Green_Box
+  - Yellow_Box
+  - Red_Box
+  - Blue_Box
   layers:
   - Default
   - TransparentFX
@@ -12,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Draggable
   - 
   - 
   - 
@@ -41,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Draggables
+    uniqueID: 156301901
     locked: 0
