@@ -9,14 +9,11 @@ public class GameManager : MonoBehaviour
     // Referencia al ScoreManager para actualizar el texto en el Canvas
     public ScoreManager scoreManager;
 
-<<<<<<< HEAD
     // Referencia a todas las cintas transportadoras
     public ConveyorBelt[] conveyorBelts;
 
     public bool isResetting = false; // Variable para indicar si se está reiniciando
 
-=======
->>>>>>> Scene&Box
     public void AddPoint()
     {
         if (scoreManager != null)
@@ -30,7 +27,6 @@ public class GameManager : MonoBehaviour
             Debug.LogError("ScoreManager no asignado en GameManager.");
         }
     }
-<<<<<<< HEAD
 
     public void ResetAllProcesses()
     {
@@ -54,6 +50,4 @@ public class GameManager : MonoBehaviour
             Debug.LogError("No se asignaron cintas transportadoras en GameManager.");
         }
     }
-=======
->>>>>>> Scene&Box
 }

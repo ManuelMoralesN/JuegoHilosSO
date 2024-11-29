@@ -9,28 +9,20 @@ public class ConveyorBelt : MonoBehaviour
     public string acceptedTag; // Tag del objeto aceptado por esta cinta
     public GameManager gameManager; // Referencia al GameManager para sumar puntos
 
-<<<<<<< HEAD
     private List<GameObject> processesOnBelt = new List<GameObject>(); // Lista de procesos en la cinta
 
-=======
->>>>>>> Scene&Box
     private void OnTriggerStay2D(Collider2D other)
     {
         // Comprobar si el objeto tiene la etiqueta correcta
         if (other.CompareTag(acceptedTag))
         {
-<<<<<<< HEAD
             // Mover el objeto en la dirección de la cinta
-=======
-            // Mover el objeto en la direcci�n de la cinta
->>>>>>> Scene&Box
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
                 Vector2 direction = (endPoint.position - other.transform.position).normalized;
                 rb.velocity = direction * speed;
             }
-<<<<<<< HEAD
 
             // Agregar el objeto a la lista si no está
             if (!processesOnBelt.Contains(other.gameObject))
@@ -41,12 +33,6 @@ public class ConveyorBelt : MonoBehaviour
         else
         {
             // Rechazar el objeto incorrecto
-=======
-        }
-        else
-        {
-            // Rechazar el objeto incorrecto movi�ndolo fuera de la cinta
->>>>>>> Scene&Box
             RejectObject(other);
         }
     }
@@ -55,7 +41,6 @@ public class ConveyorBelt : MonoBehaviour
     {
         if (other.CompareTag(acceptedTag))
         {
-<<<<<<< HEAD
             processesOnBelt.Remove(other.gameObject);
 
             // Verificar si el juego está en estado de reinicio
@@ -92,17 +77,6 @@ public class ConveyorBelt : MonoBehaviour
     private void RejectObject(Collider2D other)
     {
         // Mover el objeto incorrecto ligeramente hacia atrás para rechazarlo
-=======
-            Destroy(other.gameObject);
-            gameManager.AddPoint(); // Asumiendo que gameManager es una instancia de ScoreManager
-        }
-    }
-
-
-    private void RejectObject(Collider2D other)
-    {
-        // Mover el objeto incorrecto ligeramente hacia atr�s para rechazarlo
->>>>>>> Scene&Box
         Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
